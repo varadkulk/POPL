@@ -92,7 +92,7 @@ public:
 		cout << "\n\nThe addition of two times is: ";
 		timer x(a + b);
 	}
-	void add(timer t)
+	void dif(timer t)
 	{
 		int a = (((((this->d * 24) + this->h) * 60) + this->m) * 60) + this->s;
 		int b = (((((t.d * 24) + t.h) * 60) + t.m) * 60) + t.s;
