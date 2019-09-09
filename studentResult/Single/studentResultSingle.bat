@@ -1,0 +1,1 @@
+g++ studentResultSingle.cpp && .\a.exe
