@@ -1,0 +1,1 @@
+g++ studentResultHybrid.cpp && .\a.exe
