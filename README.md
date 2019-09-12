@@ -1,2 +1,2 @@
 # POPL
- Principles of Programming Laanguages Programs (Sem 5)
+Programs from Principles of Programming Languages Course (Sem 5)
