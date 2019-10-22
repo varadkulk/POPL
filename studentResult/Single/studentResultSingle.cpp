@@ -74,3 +74,22 @@ int main()
 	result r;
 	return 0;
 }
+
+/*
+Output:
+Enter roll no.: 38
+Enter name: Varad
+Enter marks M1: 50
+Enter marks M2: 40
+Enter marks M3: 60
+Enter sports grade(A,B,C,D,F): A
+Roll No: 38
+Name: Varad
+Marks:
+M1: 50
+M2: 40
+M3: 60
+Sports Grade: A
+Total: 250
+Percentage: 62
+*/
