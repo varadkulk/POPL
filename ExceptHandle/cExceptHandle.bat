@@ -1,0 +1,1 @@
+g++ exceptHandle.cpp && .\a.exe
