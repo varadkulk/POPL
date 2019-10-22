@@ -21,20 +21,13 @@ public:
 	}
 	void modify(int srno)
 	{
-		cout << "\nModyfing details of Student no. " << srno << "\n Current details: Roll No.: " << this->rollno << "\nName: " << this->name << "\nDivison: " << this->div << "\nEnter new details::\nRoll no.: ";
+		cout << "\nModyfing details of Student no. " << srno << "\n Current details:\nRoll No.: " << this->rollno << "\nName: " << this->name << "\nDivison: " << this->div << "\nEnter new details::\nRoll no.: ";
 		cin >> this->rollno;
 		cout << "Name: ";
 		cin >> this->name;
 		cout << "Division: ";
 		cin >> this->div;
 	}
-	// void del(int srno)
-	// {
-	// 	this->rollno = 0;
-	// 	this->name = "";
-	// 	this->div = "";
-	// 	cout << "Sr. No. " << srno << " deleted";
-	// }
 };
 void display(student s[], int currentValue)
 {
@@ -51,7 +44,7 @@ int del(student s[], int currentValue, int srno)
 }
 int main()
 {
-	int n, choice = 1, srno, currentValue;
+	int n, choice = 1, srno, currentValue = 0;
 	cout << "Enter the maximum size of student database (maximum number of sr. nos.): ";
 	cin >> n;
 	student s[n];
@@ -65,7 +58,10 @@ int main()
 			cout << "\nThank You!!\n";
 			break;
 		case 1:
-			s[currentValue].accept(currentValue + 1);
+			if (currentValue < n)
+				s[currentValue++].accept(currentValue);
+			else
+				cout << "\nDatabase full!!!\n";
 			break;
 		case 2:
 			cout << "Updated databse:\n";
@@ -102,3 +98,110 @@ int main()
 	}
 	return 0;
 }
+
+/*
+Output:
+Enter the maximum size of student database (maximum number of sr. nos.): 2
+
+Enter
+1.to add student     
+2.to display database
+3.to modify data     
+4.to delete data     
+0.to exit
+Input: 1
+
+Student number 1:
+Enter roll no.: 37
+Enter name: Varad
+Enter division: TYE
+
+Enter
+1.to add student     
+2.to display database
+3.to modify data     
+4.to delete data     
+0.to exit
+Input: 1
+
+Student number 2:
+Enter roll no.: 49
+Enter name: Ajit
+Enter division: TYD
+
+Enter
+1.to add student     
+2.to display database
+3.to modify data     
+4.to delete data     
+0.to exit
+Input: 2
+Updated databse:
+
+Sr. No. Roll no.        Name    Divison
+1       37              Varad   TYE    
+2       49              Ajit    TYD
+
+Enter
+1.to add student
+2.to display database
+3.to modify data
+4.to delete data
+0.to exit
+Input: 3
+Enter the Sr. no. :1
+
+Modyfing details of Student no. 1
+ Current details:
+Roll No.: 37
+Name: Varad
+Divison: TYE
+Enter new details::
+Roll no.: 38
+Name: Varad
+Division: TYC
+
+Enter
+1.to add student
+2.to display database
+3.to modify data
+4.to delete data
+0.to exit
+Input: 2
+Updated databse:
+
+Sr. No. Roll no.        Name    Divison
+1       38              Varad   TYC
+2       49              Ajit    TYD
+
+Enter
+1.to add student
+2.to display database
+3.to modify data
+4.to delete data
+0.to exit
+Input: 4
+Enter the Sr. no. :2
+
+Enter
+1.to add student
+2.to display database
+3.to modify data
+4.to delete data
+0.to exit
+Input: 2
+Updated databse:
+
+Sr. No. Roll no.        Name    Divison
+1       38              Varad   TYC
+
+Enter
+1.to add student
+2.to display database
+3.to modify data
+4.to delete data
+0.to exit
+Input: 0
+
+Thank You!!
+*/
