@@ -113,3 +113,22 @@ int main()
 	t1.dif(t2);
 	return 0;
 }
+/*Output
+Timer 1:
+Enter:
+HH:25
+MM:12
+SS:32
+DD:HH:MM:SS : 01:01:12:32
+
+Timer 2:
+Enter:
+HH:15
+MM:45
+SS:12
+DD:HH:MM:SS : 00:15:45:12
+
+The addition of two times is: DD:HH:MM:SS : 01:16:57:44
+
+The difference of two times is: DD:HH:MM:SS : 00:09:27:20
+*/
