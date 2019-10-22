@@ -1,0 +1,1 @@
+javac operateString.java && java operateString
