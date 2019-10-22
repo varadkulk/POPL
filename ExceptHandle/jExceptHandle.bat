@@ -1,0 +1,1 @@
+javac exceptHandle.java && java exceptHandle
