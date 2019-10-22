@@ -147,3 +147,16 @@ int main()
 	n1.div(n2);
 	return 0;
 }
+/*Output
+The number is: 14 + 6i
+
+The addition of numbers is: 26 + 11i
+
+The subtraction of numbers is: -2-1i
+
+The multiplication of numbers is: 138 + 142i
+
+The division of numbers is:
+198-2i
+--- -
+232 232*/
