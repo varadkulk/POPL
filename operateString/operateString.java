@@ -5,10 +5,8 @@ import static java.lang.System.*;
 class operateString {
 	static Scanner sc = new Scanner(System.in);
 
-	void compare(String s) {
+	void compare(String s, String s2) {
 		s = s.trim();
-		out.print("Enter String to compare: ");
-		String s2 = sc.nextLine();
 		s2 = s2.trim();
 		if (s.equals(s2))
 			out.println("String s1 and s2 are equal");
@@ -16,10 +14,8 @@ class operateString {
 			out.println("String s1 and s2 are not equal");
 	}
 
-	void subString(String s) {
+	void subString(String s, String s2) {
 		s = s.trim();
-		out.print("Enter Sub string: ");
-		String s2 = sc.nextLine();
 		s2 = s2.trim();
 		int x = 0;
 		for (int i = 0; i < (s.length() - s2.length()); i++) {
@@ -33,9 +29,7 @@ class operateString {
 			out.println("\"" + s2 + "\" is not present in \"" + s + "\"");
 	}
 
-	void concat(String s) {
-		out.print("Enter string to concat: ");
-		String s2 = sc.nextLine();
+	void concat(String s, String s2) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(s);
 		sb.append(s2);
@@ -74,13 +68,19 @@ class operateString {
 				out.println("Length of the string is: " + s.length());
 				break;
 			case 2:
-				os.compare(s);
+				out.print("Enter String: ");
+				String cmp = sc.nextLine();
+				os.compare(s,cmp);
 				break;
 			case 3:
-				os.subString(s);
+				out.print("Enter String: ");
+				String sub = sc.nextLine();
+				os.subString(s,sub);
 				break;
 			case 4:
-				os.concat(s);
+				out.print("Enter String: ");
+				String con = sc.nextLine();
+				os.concat(s,con);
 				break;
 			case 5:
 				os.palindrome(s);
@@ -91,4 +91,63 @@ class operateString {
 			}
 		}
 	}
-}
+}/*
+Output:
+Enter String: varav
+Enter:
+1. for length of string
+2. for comparision
+3. for sub String
+4. for concat
+5. for palindrome
+0. Exit
+Choice: 1
+Length of the string is: 5
+Enter:
+1. for length of string
+2. for comparision
+3. for sub String
+4. for concat
+5. for palindrome
+0. Exit
+Choice: 2
+Enter String: abc
+String s1 and s2 are not equal
+Enter:
+1. for length of string
+2. for comparision
+3. for sub String
+4. for concat
+5. for palindrome
+0. Exit
+Choice: 3
+Enter String: va
+"va" is present in "varav"
+Enter:
+1. for length of string
+2. for comparision
+3. for sub String
+4. for concat
+5. for palindrome
+0. Exit
+Choice: 4
+Enter String: 
+The concatination of "varav" and " is really varad" is "varav is really varad"
+Enter:
+1. for length of string
+2. for comparision
+3. for sub String
+4. for concat
+5. for palindrome
+0. Exit
+Choice: 5
+varav is a palindrome String
+Enter:
+1. for length of string
+2. for comparision
+3. for sub String
+4. for concat
+5. for palindrome
+0. Exit
+Choice: 0
+Thank You!! */
