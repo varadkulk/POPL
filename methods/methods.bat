@@ -1,0 +1,1 @@
+javac methods.java && java methods
