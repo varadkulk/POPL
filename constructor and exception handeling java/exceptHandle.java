@@ -10,3 +10,7 @@ class exceptHandle {
 		}
 	}
 }
+/*
+Output:
+Divide by 0 error
+*/
