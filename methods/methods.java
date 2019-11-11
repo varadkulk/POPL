@@ -14,4 +14,7 @@ class methods {
 		out.println("Square of " + (x) + " is " + square(x));
 	}
 
-}
+}/*
+Output:
+Enter the number: 25
+Square of 25 is 625*/
